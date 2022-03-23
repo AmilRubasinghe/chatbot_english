@@ -1,0 +1,16 @@
+version: "3.0"
+
+nlu:
+- intent: mohfulldetails
+  examples: |
+    - [Matara](city) district moh office details 
+    - Telephone number in [Galle](city)
+- intent: askmoh
+  examples: |
+    - where the moh office situated in
+    - Which is the address of moh office in this area.
+
+- intent: mohintown
+  examples: |
+    - [Matara](city)
+    - [Galle](city)
