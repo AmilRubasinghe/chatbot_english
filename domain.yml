@@ -64,6 +64,9 @@ intents:
   - no_correct
   - yes_correct
 
+  # daq
+  - faq
+
 entities:
   - city
   - return_to_srilanka

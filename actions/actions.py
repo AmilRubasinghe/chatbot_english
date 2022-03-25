@@ -207,8 +207,8 @@ class Actionglobalrecovary(Action):
 class dbTracker:
     def getDbConnection():
         
-        # client = pymongo.MongoClient("mongodb+srv://admin:admin@cluster0.auccv.mongodb.net/covid?retryWrites=true&w=majority")
-        client = pymongo.MongoClient('localhost', 27017)
+        client = pymongo.MongoClient("mongodb+srv://admin:admin@cluster0.auccv.mongodb.net/covid?retryWrites=true&w=majority")
+        # client = pymongo.MongoClient('localhost', 27017)
         db = client.covid
         logging.info("connection with database...")
         return db

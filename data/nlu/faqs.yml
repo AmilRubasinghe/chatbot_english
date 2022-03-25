@@ -1,0 +1,332 @@
+version: "3.0"
+
+nlu:
+- intent: faq/what_corona
+  examples: |
+    - what is a coronavirus?
+    - what is covid
+    - what is covid-19
+    - what does covid stand for
+    - what is corona
+    - what is corona virus disease
+    - what does covid-19 stand for
+    - what do you mean by covid-19
+    - define covid 
+    - explain me about coronavirus
+    - Please explain me what corona virus is
+
+- intent: faq/how_spread
+  examples: |
+    - How does covid-19 spread?
+    - How does corona spread
+    - how is the corona virus transmitted
+    - how is coronavirus disease spread among humans
+    - how does the virus spread
+    - how are the covid germs transmitted
+    - how do the covid-19 germs spread
+    - how would the virus transmit from one person to another
+    - how can covid 19 spread among people
+
+
+- intent: faq/transmitted_air
+  examples: |
+    - Can the virus that causes COVID-19 be transmitted through the air?
+    - Can I get effected with the virus through breathing?
+    - Can the virus spread through air
+    - can corona virus trnsmit in air
+    - does the covid 19 virus contained in the air
+    - can the virus spread through breathing
+    - can the covid 19 virus pollute the breathing air
+    - does corona spread in air 
+
+- intent: faq/no_symptomsPerson
+  examples: |
+    - Can CoVID-19 be caught from a person who has no symptoms?
+    - can a covid 19 affected person without any symptoms transmit the virus to a healthy person
+    - can a person with no covid symptoms can transmit the disease
+    - Can I get covid 19 from a person who is affected, but with no symptoms yet
+    - I have covid but no symptoms, can I spread the disease
+
+- intent: faq/common_symptoms
+  examples: |
+    - What are symptoms of COVID-19 ?
+    - name some common symptoms of covid-19
+    - what are the main symptoms that can be observed in a covid positive patient
+    - what are some common symptoms
+    - main symptoms of covid patient
+    - what are the general symptoms of a covid-19 infected person
+    - general symptoms of coronavirus
+    - what are the most popular symptoms of covid
+
+- intent: faq/faeces_ofSomeoneWithDisease
+  examples: |
+    - Can I catch COVID-19 from the faeces of someone with the disease?
+    - can I get covid from the poo of a person with covid positive
+    - Can I get effected through faecal matter of an affected person
+
+- intent: faq/when_getaTest
+  examples: |
+    - When should I get a test for COVlD-19?
+    - When should i check for covid?
+    - what is the best time to do a checkup
+    - when is the perfect time to do a PCR test
+    - Upto what time should I wait to do a PCR test?
+
+- intent: faq/what_shouldGetSee
+  examples: |
+    - What test should I get to see if I have COVlD-19?
+    - What are the tests that can check for the presence of covid
+    - What is the best test to determine the presence of covid virus
+    - How many tests are there to test for Covid 19
+    - What is the best test to test for corona
+    - What is the name of the test that is used to identify the presence of covid virus
+    - How can I confirm someone is affected by covid-19
+    - How can I make sure whether I am affected with corona or not
+
+- intent: faq/what_rapidTest
+  examples: |
+    - What about rapid antigen tests?
+    - what is Rapid Antigen Test
+    - how does the antigen test work
+    - tell me about the rapid antigen
+    - can I know about the rapid antigen test
+    - Please explain me how the rapid antigen test work
+    - Could you please explain what rapid antigen test is
+    - What is RAT test
+    - What does RAT abbreviation means
+
+- intent: faq/climate_changeMakeCovid
+  examples: |
+    - Will climate change make COVlD-19 worse?
+    - Does climate have an effect on the virus spread?
+    - Can the change in climate change the rate of spreading of the virus
+    - How can the climate affect the spread of the virus
+    - Does the cold climate increase the spread of the virus
+    - climate chamge on disease spread
+
+- intent: faq/clear_foodItem
+  examples: |
+    - How should I clean food items from the grocery store, for example fruit, vegetables or packaged items?
+    - How to clean any food items bought from a store
+    - How should I clean any items brought in from a public store
+    - How to clean items I buy and bring home
+    - How to wash groceries bought from a public supermarket
+
+- intent: faq/when_goingGrocerySuperMarket
+  examples: |
+    - Are gloves recommended for the community in public spaces to protect against COVlD-19, for example when going to the grocery store supermarket?
+    - Is it compulsory to wear gloves at a supermarket or a grocery store
+    - Do I have to wear gloves at supermarket and grocery store
+    - Should I wear a glove when I go shopping
+    - Is it mandatory to wear a pair of gloves when shopping
+
+- intent: faq/alternative_toFabricMarks
+  examples: |
+    - Are there alternatives to fabric masks such as face shields?
+    - What are the subtitutes for fabric face maks
+    - can I wear something else instad of fabric face masks
+    - what can I wear instead of face mask
+    - what are alternatives for face masks
+    - with what can I substitute fabric masks
+    - can I use a face shield only instead of a face mask
+
+- intent: faq/children_wearMaskWhenSports
+  examples: |
+    - Should children wear a mask when playing sports or doing physical activities?
+    - Is it necessary for children to wear facemasks when doing sports
+    - should i wear a mask when doing sports
+    - is it important to wear masks while playing
+    - how necessary is it to wear a mask when doing physical sports
+
+- intent: faq/what_typeOfMaskForChildren
+  examples: |
+    - What type of mask should children wear?
+    - is there any specific masks for children
+    - what is the best face mask for children
+    - what facemask type is better for small childern
+    - what mask is best for children
+    - what is the best mask for a small child
+    - is KN95 a good mask for small children
+    - are fabric masks better for small children
+    - as a child what type of mask should i wear
+    - what type of mask should i buy for my child
+
+- intent: faq/when_childrenWearMaskHealthIssue
+  examples: |
+    - Should children who have health issues or a medical condition that compromises their immune system wear a mask?
+    - is it okay for children with certain health issues to wear face masks
+    - is wheezing condition in a child bad to wear a face mask
+    - what health issues can give a child an excuse for not wearing a mask
+    - is it compulsory for a child with wheezing issues to wear a mask
+    - is it compulsory for children to wear face masks despite any health issues they have
+
+- intent: faq/children_wearMask
+  examples: |
+    - Should children wear a mask?
+    - is it necessary for children to wear face masks too
+    - should children under 5 years wear face masks
+    - should children wear masks
+    - should infants also wear masks
+    - Are there situations where children aged 5 years and under may wear or be required to wear a mask?
+    - is it compulsory for small children to wear masks
+
+- intent: faq/other_diseasesLikeCovid
+  examples: |
+    - COVID-19 is a zoonotic disease which means that it existed naturally in animals before it spilled over to humans. Most new or emerging infectious diseases whether in wildlife, domestic animals, plants or people - are driven by human activities that lead to environmental degradation. Human pressures, from deforestation, to intensive and polluting agricultural practices, to unsafe management and consumption of wildlife, increase the risk of new or emerging infectious diseases. This is why the number of emerging infectious disease outbreaks has increased steadily since 1980.  
+    - what are other diseases that are similar to covid
+    - what are the other diseases which have similar symptoms to covid-19
+    - are there any other diseases like covid
+    - what other diseases have similar symptoms to covid 19
+    - are there any similar diseases to covid
+
+- intent: faq/after_pandemicGoBackNomal
+  examples: |
+    - When will this pandemic end so things can go back to normal?
+    - when will the epidemic end
+    - when do u think this pandemic will end
+    - can i know when will the covid spread will end according to the estimations
+    - according to thw current data, when will this epidemic end
+
+- intent: faq/safe_toHaveSexAtThisTime
+  examples: |
+    - Is it safe to have sex at this time?
+    - Is it safe if I have sex 
+    - does the spread of covid have any effects on having sex
+    - is having sex dangerous because of the current pandemic
+    - is it bad to have constant sex with strangers in the midst of this pandemic
+    - is it dangerous to have sex because of covid
+    - do i need to be careful when having sex at this time
+    - Is it okay for me and my partner to have unprotected sex at a time like this
+
+- intent: faq/should_IwearMaskWhenSchoolOrSport
+  examples: |
+    - Should I wear a mask at school or when playing sports?
+    - Sould i wear a mask even when doing physical sports
+    - should my child wear a mask when going to school
+    - should I wear a mask for the whole time in school
+    - is it compulsory to wear masks to school
+    - do i need to wear a mask when doing sports in school
+    - does my child have to wear a face mask all the time at school
+
+- intent: faq/reopening_school
+  examples: |
+    - Schools are reopening in some areas of my country. Is it safe to go back to school?
+    - Is it safe to attend school at this time
+    - what is your opinion on reopening schools at this time
+    - is is stafe for students if we reopen schools at this moment
+    - am I safe to attend school at this time
+    - is reopening scools a good decision at this time
+    - am I safe to go to school
+    - can I go to school safely during this pandemic
+
+- intent: faq/can_iPlaySport
+  examples: |
+    - I know there is a risk of getting COVlD-19, but can I still do sports?
+    - is there a risk in doing physical sports
+    - can I get covid while doing sports
+    - am I safe from covid whole doing sports
+    - Are there any complications in engaging in physical activities at this time
+
+- intent: faq/chronic_healthconditionhavesymptoms
+  examples: |
+    - I am on medication for a chronic health condition. Should I change anything?
+    - As a patient with chronic disesa, is there any additional things I should be vary of
+    - Should people with chronic illnesses be more careful of the virus
+    - Would the virus effect more to people with chronic health conditions
+    - If I am a chronic disease patient, do I have a higher chance of getting covid 19
+
+- intent: faq/symtoms_haveWhatShouldIDo
+  examples: |
+    - What should I do if I have any covid symptoms
+    - What should be the first step to be taken if a person is shoving covid symptoms
+    - Is it compulsory to immediately visit a doctor if I am shoving signs of covid
+    - Whom should I contact if I am showing any covid symptoms
+    - Is it necessary to channel a general practitioner as soon as a close contact of mine shows covid 19 symptoms
+    - Should I contact a healthcare provider if I show any signs of covid
+
+- intent: faq/spread_covidToOther
+  examples: |
+    - Can adolescents spread COVlD-19 to other people even if they have mild or no symptoms?
+    - Can small children spread the virus
+    - Does young people spread the virus at a different degree
+    - Does adolescents have lower chance of getting infected
+    - Does teenagers have a low possibility of spreading the covid virus
+    - Does the age of a person effect the possibility of catching covid
+
+- intent: faq/children_catchCovid
+  examples: |
+    - Can adolescents catch COVlD-19?
+    - Can children catch covid
+    - can my small son or daughter be effected by covid
+    - does covid-19 affect teenagers
+    - can infants get detected with covid
+
+- intent: faq/antibiotics_forCovid
+  examples: |
+    - Are antibiotics effective in preventing or treating COVlD-19?
+    - Are there any antibiotics that works against covid virus
+    - Does antibiotics work against covid
+    - What antibiotics are effective against coronavirus
+    - What antibiotic should I buy if I have covid 19
+
+- intent: how_longDevelopSymptoms
+  examples: |
+    - How long does it take to develop symptoms?
+    - How much time will it take to develop symptoms after getting infected
+    - How long will the symptoms take to appear upon getting infected
+    - How long does it take for the symptoms to appear
+
+- intent: faq/most_riskPeople
+  examples: |
+    - Who is most at risk of severe illness from COVlD-19?
+    - Which age people have the most risk off covid
+    - Who would have the most risk of getting infected with covid
+    - Which people whould be the most careful of covid infection
+
+- intent: faq/long_termEffect
+  examples: |
+    - Are there long-term effects of COVlD-19?
+    - What are the long term effects of covid
+    - Long term effects
+    - Long term effects of coronavirus
+
+- synonym: compulsory
+  examples: |
+    - necessary
+    - mandatory
+
+- synonym: climate
+  examples: |
+    - weather
+
+- synonym: faeces
+  examples: |
+    - poo
+    - body waste
+    - dung
+    - manure
+    - ordure
+    - waste matter
+    - poop
+    - excrement
+    - stools
+    - turds
+    - shit
+    - crap
+
+- synonym: rapid antigen test
+  examples: |
+    - rapid test
+    - antigen test
+    - rapid antigen
+    - antigen
+    - RAT test
+    - RAT
+
+- synonym: pandemic
+  examples: |
+    - epidemic
+    - rife
+    - rampant
+    - widespread
+    - prevalent

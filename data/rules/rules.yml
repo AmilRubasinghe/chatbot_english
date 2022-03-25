@@ -47,3 +47,8 @@ rules:
     - action: utter_slots_values
     - action: action_ontalogy_tracker
 
+- rule: generalized rule
+  steps:
+  - intent: faq
+  - action: utter_faq
+

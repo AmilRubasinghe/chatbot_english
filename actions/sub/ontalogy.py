@@ -5,6 +5,7 @@ import json
 import re
 sys.path.append("C:/")
 ONTOLOGY_PATH = "file://~/FYP/Ontology/covid-data-ontology.owl"
+# ONTOLOGY_PATH = "file://F:/fanal-year-project/covid-data-ontology.owl"
 
     
 
