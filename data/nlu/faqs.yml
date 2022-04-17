@@ -269,7 +269,7 @@ nlu:
     - What antibiotics are effective against coronavirus
     - What antibiotic should I buy if I have covid 19
 
-- intent: how_longDevelopSymptoms
+- intent: faq/how_longDevelopSymptoms
   examples: |
     - How long does it take to develop symptoms?
     - How much time will it take to develop symptoms after getting infected

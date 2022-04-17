@@ -24,3 +24,26 @@ stories:
   - intent: mohintown
   - action: action_database_tracker
 
+- story: storydatabasephicase
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_what_you_want
+  - intent: phifulldetails
+  - action: action_phiDatabase_tracker
+
+- story: storyasktownanddatabasecase
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_what_you_want
+  - intent: askphi
+  - action: utter_phiintown
+  - intent: mohintown
+  - action: action_phiDatabase_tracker
+
+

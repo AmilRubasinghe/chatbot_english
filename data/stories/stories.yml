@@ -37,6 +37,10 @@ stories:
 - story: are_you_bot
   steps:
   - intent: askisbot
+  - action: utter_iamabot 
+
+- story: are_you_bot_created
+  steps:
   - intent: askwhoisit
   - action: utter_iamabot 
 
@@ -50,10 +54,10 @@ stories:
   - intent: askwhatspossible
   - action: utter_ido 
 
-# - story: bot_blame
-#   steps:
-#   - intent: blameBot
-#   - action: utter_bot_to_blame 
+- story: bot_blame
+  steps:
+  - intent: blameBot
+  - action: utter_bot_to_blame 
 
 - story: nice_to_meet
   steps:
@@ -63,4 +67,9 @@ stories:
 - story: thanks
   steps:
   - intent: thank
+  - action: utter_thanks  
+
+- story: canthelpfor you
+  steps:
+  - intent: canthelp
   - action: utter_thanks  

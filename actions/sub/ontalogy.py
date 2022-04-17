@@ -4,8 +4,8 @@ from owlready2 import *
 import json
 import re
 sys.path.append("C:/")
-ONTOLOGY_PATH = "file://~/FYP/Ontology/covid-data-ontology.owl"
-# ONTOLOGY_PATH = "file://F:/fanal-year-project/covid-data-ontology.owl"
+# ONTOLOGY_PATH = "file://~/FYP/Ontology/covid-data-ontology.owl"
+ONTOLOGY_PATH = "file://F:/fanal-year-project/covid-data-ontology.owl"
 
     
 
@@ -36,6 +36,9 @@ def ontalogyCall(dataList):
             
             if(e["entity"] == "Immigration_History"):
                 Immigration_History = (e['value'])
+            
+            # if(e["entity"] == "Vaccination"):
+            #     Vaccination = (e['value'])
 
     # Create user in ontology
     name = onto.Person(name)
@@ -55,6 +58,11 @@ def ontalogyCall(dataList):
         name.hadHistory.append(True)
     elif((Contact_History.lower() == 'no') or (Travel_History.lower() == 'no')):
         name.hadHistory.append(False)
+    
+    # if(Vaccination.lower() == 'yes'):
+    #     name.fully_vaccinated.append(True)
+    # elif(Vaccination.lower() == 'no'):
+    #     name.fully_vaccinated.append(False)
 
     # Start Reasoner
     sync_reasoner(infer_property_values = True)

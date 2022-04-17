@@ -1,8 +1,13 @@
 version: "3.0"
 responses:
+  utter_phidetailsall:
+  - text: In {cityName} district,phi name {phiName} PHI telephone no is {phitpNumber}  phi email {phiEmail}  address is {phiaddress}.
+  
   utter_mohdetailsall:
   - text: In {cityName} district, Main MOH office's telephone no is {mohtpNumber1} and address is {mohaddress1}.
   # utter_mohtelephoneNumber:
   # - text: Main MOH office's telephone no is {mohphoneNumber} in {cityName} district
   # utter_mohtelephoneNumber:
   # - text: In {Namecity} district, Main MOH office's address is {mohpermenetaddress}
+
+  

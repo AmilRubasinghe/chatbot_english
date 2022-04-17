@@ -4,13 +4,122 @@ nlu:
 - intent: mohfulldetails
   examples: |
     - [Matara](city) district moh office details 
-    - Telephone number in [Galle](city)
+    - Telephone number of moh office in [Galle](city)
+    - can I have the contact information of the moh offices in [gampaha](city) district
+    - please tell me the details of [colombo](city) moh offices
+    - information of [kandy](city) MOH office
+    - [Kalutara](city) district's MOH office details
+    - details of MOH offices in [Kurunegala](city)
+    - Where are the moh offices of [anuradhapura](city) located 
+    
 - intent: askmoh
   examples: |
     - where the moh office situated in
-    - Which is the address of moh office in this area.
+    - Which is the address of moh office in this area
+    - Can I have details of the MOH of my area
+    - can I have the details of the closest moh office
+    - MOH details
+    - moh office contact number
+    - can I have the details of the moh office closest to me
+    - details of the closest MOH office
+
+- intent: phifulldetails
+  examples: |
+    - [Matara](city) district's phi details 
+    - Telephone number of the public health inspector in [Galle](city)
+    - can I have the contact information of the PHI in [gampaha](city) district
+    - please tell me the details of [colombo](city) PHIs
+    - information of [kandy](city) public health inspector
+    - [Kalutara](city) district's PHI's details
+    - details of the PHI in [Kurunegala](city)
+    - PHI of [Kalutara](city) area
+    - Who are the public health inspectors in [kurunegala](city) district
+    - Give me a list of PHIs in [Jaffna](city)
+
+- intent: askphi
+  examples: |
+    - what are the phis in my area
+    - Which is the contact number of the public health inspector in this area
+    - Can I have details of the PHIs of my area
+    - can I have the details of the closest PHI personal
+    - PHI details
+    - Public health inspector contact number
+    - can I have the details of the phi closest to me
+    - details of the closest public health inspector  
 
 - intent: mohintown
   examples: |
-    - [Matara](city)
+    - [Colombo](city)
+    - [Gampaha](city)
+    - [Kalutara](city)
+    - [Kandy](city)
+    - [Matale](city)
+    - [Nuwara Eliya](city)
     - [Galle](city)
+    - [Matara](city)
+    - [Hambantota](city)
+    - [Jaffna](city)
+    - [Kilinochchi](city)
+    - [Mannar](city)
+    - [Vavuniya](city)
+    - [Mullativu](city)
+    - [Batticaloa](city)
+    - [Ampara](city)
+    - [Trincomalee](city)
+    - [Kurunegala](city)
+    - [Puttalam](city)
+    - [Anuradhapura](city)
+    - [Polonnaruwa](city)
+    - [Badulla](city)
+    - [Moneragala](city)
+    - [Ratnapura](city)
+    - [Kegalla](city)
+
+- lookup: city
+  examples: |
+    - Colombo
+    - Gampaha
+    - Kalutara
+    - Kandy
+    - Matale
+    - Nuwara Eliya
+    - Galle
+    - Matara
+    - Hambantota
+    - Jaffna
+    - Kilinochchi
+    - Mannar
+    - Vavuniya
+    - Mullativu
+    - Batticaloa
+    - Ampara
+    - Trincomalee
+    - Kurunegala
+    - Puttalam
+    - Anuradhapura
+    - Polonnaruwa
+    - Badulla
+    - Moneragala
+    - Ratnapura
+    - Kegalla
+
+- synonym: moh
+  examples: |
+    - medical officer of health
+    - medical officer health
+    - medical officers of health
+    - MOH
+    - MOHs
+    - MOH's
+    - MOHs'
+
+- synonym: phi
+  examples: |
+    - public health inspector
+    - public health inspectors
+    - public health inspector's
+    - PHI
+    - PHIs
+    - PHI's
+    - PHIs'
+    - PHI personal

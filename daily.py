@@ -3,53 +3,57 @@ import requests
 def dailyData():
     response = requests.get("https://www.hpb.health.gov.lk/api/get-current-statistical").json()
     data = response['data']
-    for pcr in data['daily_pcr_testing_data']:
-        if pcr['date'] == '2021-09-18':
-            count = pcr['pcr_count']
-            print (count)
     message = data['local_new_cases']
     print (message)
-    return count, message
+    return message
 
 def dailyNewCases():
     response = requests.get("https://www.hpb.health.gov.lk/api/get-current-statistical").json()
     data = response['data']
     message = data['local_new_cases']
+    print (message)
     return message
 def dailyTotalCases():
     response = requests.get("https://www.hpb.health.gov.lk/api/get-current-statistical").json()
     data = response['data']
     message = data['local_total_cases']
+    print (message)
     return message
 def dailyNoOfIndividuals():
     response = requests.get("https://www.hpb.health.gov.lk/api/get-current-statistical").json()
     data = response['data']
     message = data['local_total_number_of_individuals_in_hospitals']
+    print (message)
     return message
 def dailyTotalDeath():
     response = requests.get("https://www.hpb.health.gov.lk/api/get-current-statistical").json()
     data = response['data']
     message = data['local_deaths']
+    print (message)
     return message
 def dailyTodayDeades():
     response = requests.get("https://www.hpb.health.gov.lk/api/get-current-statistical").json()
     data = response['data']
     message = data['local_new_deaths']
+    print (message)
     return message
 def dailyRecovered():
     response = requests.get("https://www.hpb.health.gov.lk/api/get-current-statistical").json()
     data = response['data']
     message = data['local_recovered']
+    print (message)
     return message
 def dailyTotalpcrTest():
     response = requests.get("https://www.hpb.health.gov.lk/api/get-current-statistical").json()
     data = response['data']
     message = data['total_pcr_testing_count']
+    print (message)
     return message
 def dailylocalActiveCase():
     response = requests.get("https://www.hpb.health.gov.lk/api/get-current-statistical").json()
     data = response['data']
     message = data['local_active_cases']
+    print (message)
     return message
 
 def dailyglobalActiveCase():

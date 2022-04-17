@@ -16,7 +16,6 @@ intents:
   - askwhoisit
   - blameBot
   - canthelp
-  - explain
   - nicetomeeyou
   - thank
   #daily
@@ -36,14 +35,16 @@ intents:
   #database call
   - mohfulldetails:
       use_entities: []
-  - askmoh:
-      use_entities: []
+  - askmoh
   - mohintown:
       use_entities: []
-
+  - phifulldetails:
+      use_entities: []
+  - askphi
   - request_restaurant
   - request_recomandation
   - stop
+  - out_of_scope
 
   - yes_return
   - no_return
@@ -238,6 +239,10 @@ forms:
 
 responses:
 
+  utter_out_of_scope:
+  - text: Sorry, I can't handle that request.
+  utter_please_rephrase:
+  - text: I'm sorry, I didn't quite understand that. Could you rephrase?
 
   utter_ask_continue:
   - text: "Do you want to continue?"
@@ -396,6 +401,9 @@ responses:
   utter_mohintown:
   - text: "Which district moh office details, Do you want to know?"
 
+  utter_phiintown:
+  - text: "Which district phi  details, Do you want to know?"
+
 actions:
 - action_today_positive_case
 - action_total_positive_case
@@ -406,6 +414,7 @@ actions:
 - action_pcr_count
 - action_active_case
 - action_database_tracker
+- action_phiDatabase_tracker
 - action_ontalogy_tracker
 - action_symptom_list
 - action_correct_symtoms

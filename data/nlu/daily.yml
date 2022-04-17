@@ -8,56 +8,115 @@ nlu:
     - covid death today
     - how many death today
     - today death count
+    - what is the total number of deaths for today
+    - what is the covid death count as of today
+    - how many people had died due to covid for today
+
 - intent:  todaypositivecase
   examples: |
     - how many positive case today
     - today positive case count
+    - how many covid cases have been reported for today
+    - covid case count today
+    - how many perople were detected to be covid positive for today
+    - how many new covid cases are reported so far for today
+    - today positive case count
+
+
 - intent:  totalpositivecase
   examples: |
     - how many total positive case
     - total positive case 
+    - how many cases reported so far
+    - total number of covid cases so far
+    - how many people have been identified with covid so far
+    - total covid cases
+    - can I know the number of cases that have been reported since the start of the pandemic
+
 - intent:  totaldeath
   examples: |
     - how many total death
     - total death count
+    - how many people have died to covid in total
+    - how many have died to covid so far
+    - how many deaths in total have been reported so far
+    - total deaths
+    - Can I know the total number of deaths that was caused by the covid 19 virus so far
+
 - intent:  individualsinhospital
   examples: |
     - how many total no of individuals in hospital
     - total no of individuals in hospital
+    - how many people are currently getting treated for covid 19 in hospitals and medical centres
+    - how many people in total are currently in hospitals due to covid
+    - how many individuals are currently getting treated in hospitals
+
 - intent:  localrecovered
   examples: |
     - how many total recovered
     - total recovered
+    - how many patients have recovered from covid
+    - how many patients got cured by now
+    - how many people have got well and left hospital by now
+
 - intent:  pcrcount
   examples: |
     - how many total pcr count
     - total pcr count
+    - what is the total PCR count for today
+    - How many PCR tests have been done for today
+    - total number of PCR tests
+
 - intent:  activecase
   examples: |
-    - how many total active cases
-    - total active cases
+    - how many total active cases locally
+    - total active cases in Sri lanka
+    - How many active cases as of now in Sri Lanka
+    - total number of locally currently active cases
+    - what is the number of total local active covid cases as of now
 
 
 - intent:  globalActivecase
   examples: |
     - how many Global total active cases
     - total global active cases
+    - what is the number of active cases around the globe
+    - global active cases
+    - how many currently active covid cases internationally
+    - how much total active cases across the world
 
 - intent:  globaldeathcase
   examples: |
     - how many Global total death cases
     - total global death cases
+    - what is the current death toll across the world
+    - how many people have died from covid all over the world in total
+    - what is the global death count
+    - can I know how many people have died from corona virus internationally
 
 - intent:  globalnewdeath
   examples: |
     - how many Global new death
     - total global new death cases
+    - how much have died due to covid on today across the world
+    - how many have died today due to covid
+    - what is the death count for today across the entire world
+    - Can i know how many have died for today in the world
 
 - intent:  globalnewcase
   examples: |
     - how many Global new case
     - total global new cases
+    - how many new people have been detected as covid positive around the world for today
+    - how many new global cases for today
+    - what is the total new covid cases in the world for today
+    - can I know the number of new covid cases for today
+    
 - intent:  globalrecovery
   examples: |
     - how many Global recovery
     - total global recovery
+    - how many peorple across the globe has recovered from covid
+    - What is the total amount of people who have recovered from covid all around the world
+    - can you tell me the number of covid patient who got cured in the world
+    - how many people have got well after getting effected by covid

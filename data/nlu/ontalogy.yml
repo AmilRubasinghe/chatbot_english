@@ -7,6 +7,15 @@ nlu:
     - I had fever and now I have lost smell and taste. What could it be?
     - I have a cold headache and body pain. How can I recover at home?
     - I feel not well last few days. I think I got infected to corona virus. What should I do?
+    - I have a couple of symptoms which I feel is connected to covid
+    - Can I get some recommendations
+    - I think I have covid
+    - Is there a way to analyze my symptoms
+    - Is there a way to deduce the possibility of me being affected by covid
+    - I can't taste and smell well. Could it be covid?
+    - Symptom check
+    - Symptom checker
+    - symptom checking
   
 
 - intent: stop

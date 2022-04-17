@@ -1,0 +1,202 @@
+[
+  {
+    "text": "I get it",
+    "intent": "affirm",
+    "intent_prediction": {
+      "name": "nicetomeeyou",
+      "confidence": 0.11948423832654953
+    }
+  },
+  {
+    "text": "amazing!",
+    "intent": "affirm",
+    "intent_prediction": {
+      "name": "moodgreat",
+      "confidence": 0.792568027973175
+    }
+  },
+  {
+    "text": "it is ok",
+    "intent": "affirm",
+    "intent_prediction": {
+      "name": "greet",
+      "confidence": 0.7666747570037842
+    }
+  },
+  {
+    "text": "not bad",
+    "intent": "affirm",
+    "intent_prediction": {
+      "name": "moodunhappy",
+      "confidence": 0.8556853532791138
+    }
+  },
+  {
+    "text": "Do you have a great day?",
+    "intent": "askhowdoing",
+    "intent_prediction": {
+      "name": "goodbye",
+      "confidence": 0.4088410437107086
+    }
+  },
+  {
+    "text": "You are Human ?",
+    "intent": "askwhoisit",
+    "intent_prediction": {
+      "name": "askisbot",
+      "confidence": 0.6364418268203735
+    }
+  },
+  {
+    "text": "and you call yourself bot company? pff",
+    "intent": "canthelp",
+    "intent_prediction": {
+      "name": "stop",
+      "confidence": 0.497685045003891
+    }
+  },
+  {
+    "text": "hm i don't think you can do what i want",
+    "intent": "canthelp",
+    "intent_prediction": {
+      "name": "stop",
+      "confidence": 0.5079116225242615
+    }
+  },
+  {
+    "text": "i guess you can't help me then",
+    "intent": "canthelp",
+    "intent_prediction": {
+      "name": "stop",
+      "confidence": 0.4973222613334656
+    }
+  },
+  {
+    "text": "ok then you cant help me",
+    "intent": "stop",
+    "intent_prediction": {
+      "name": "canthelp",
+      "confidence": 0.5780726671218872
+    }
+  },
+  {
+    "text": "that was shit, you're not helping",
+    "intent": "stop",
+    "intent_prediction": {
+      "name": "canthelp",
+      "confidence": 0.5102536678314209
+    }
+  },
+  {
+    "text": "you can't help me",
+    "intent": "stop",
+    "intent_prediction": {
+      "name": "canthelp",
+      "confidence": 0.4483853876590729
+    }
+  },
+  {
+    "text": "you can't help me with what i need",
+    "intent": "stop",
+    "intent_prediction": {
+      "name": "canthelp",
+      "confidence": 0.5190775990486145
+    }
+  },
+  {
+    "text": "ok i guess you can't help me",
+    "intent": "stop",
+    "intent_prediction": {
+      "name": "canthelp",
+      "confidence": 0.5071932673454285
+    }
+  },
+  {
+    "text": "that's not what i want",
+    "intent": "stop",
+    "intent_prediction": {
+      "name": "canthelp",
+      "confidence": 0.5082846283912659
+    }
+  },
+  {
+    "text": "ok, but that doesnt help me",
+    "intent": "stop",
+    "intent_prediction": {
+      "name": "canthelp",
+      "confidence": 0.5246099233627319
+    }
+  },
+  {
+    "text": "this is leading to nothing",
+    "intent": "stop",
+    "intent_prediction": {
+      "name": "canthelp",
+      "confidence": 0.5230768322944641
+    }
+  },
+  {
+    "text": "this conversation is not really helpful",
+    "intent": "stop",
+    "intent_prediction": {
+      "name": "canthelp",
+      "confidence": 0.5150161385536194
+    }
+  },
+  {
+    "text": "you cannot help me with what I want",
+    "intent": "stop",
+    "intent_prediction": {
+      "name": "canthelp",
+      "confidence": 0.5814996361732483
+    }
+  },
+  {
+    "text": "I think you cant help me",
+    "intent": "stop",
+    "intent_prediction": {
+      "name": "canthelp",
+      "confidence": 0.6286747455596924
+    }
+  },
+  {
+    "text": "stop",
+    "intent": "stop",
+    "intent_prediction": {
+      "name": "canthelp",
+      "confidence": 0.5751305818557739
+    }
+  },
+  {
+    "text": "stop go back",
+    "intent": "stop",
+    "intent_prediction": {
+      "name": "canthelp",
+      "confidence": 0.5567057132720947
+    }
+  },
+  {
+    "text": "do you get anything?",
+    "intent": "stop",
+    "intent_prediction": {
+      "name": "canthelp",
+      "confidence": 0.5024662017822266
+    }
+  },
+  {
+    "text": "and that's it?",
+    "intent": "stop",
+    "intent_prediction": {
+      "name": "canthelp",
+      "confidence": 0.5047362446784973
+    }
+  },
+  {
+    "text": "nothing else?",
+    "intent": "stop",
+    "intent_prediction": {
+      "name": "canthelp",
+      "confidence": 0.581260085105896
+    }
+  }
+]

@@ -1,0 +1,6 @@
+[
+  {
+    "name": "city",
+    "pattern": "(\\bColombo\\b|\\bGampaha\\b|\\bKalutara\\b|\\bKandy\\b|\\bMatale\\b|\\bNuwara\\ Eliya\\b|\\bGalle\\b|\\bMatara\\b|\\bHambantota\\b|\\bJaffna\\b|\\bKilinochchi\\b|\\bMannar\\b|\\bVavuniya\\b|\\bMullativu\\b|\\bBatticaloa\\b|\\bAmpara\\b|\\bTrincomalee\\b|\\bKurunegala\\b|\\bPuttalam\\b|\\bAnuradhapura\\b|\\bPolonnaruwa\\b|\\bBadulla\\b|\\bMoneragala\\b|\\bRatnapura\\b|\\bKegalla\\b)"
+  }
+]

@@ -15,6 +15,7 @@ from rasa_sdk.executor import CollectingDispatcher
 # from rasa_sdk.forms import 
 from pymongo import MongoClient
 from actions.sub.databaseQuery import getMohDetails
+from actions.sub.databaseQuery import getPhiDetails
 from actions.sub.ontalogy import ontalogyCall
 from actions.sub.ontalogy import getOntologyDetails
 import pymongo
@@ -59,6 +60,7 @@ class ActionPositiveCase(Action):
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
         message  = dailyNewCases() 
+        print(message)
         dispatcher.utter_message(template="utter_todaypositivecase",localnewcases=message)
         return [] 
 class ActionTotalPositive(Action):
@@ -70,6 +72,7 @@ class ActionTotalPositive(Action):
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
         message  = dailyTotalCases() 
+        print(message)
         dispatcher.utter_message(template="utter_totalpositivecase",localtotalcases=message)
         return [] 
 class ActionTotalDeath(Action):
@@ -81,6 +84,7 @@ class ActionTotalDeath(Action):
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
         message  = dailyTotalDeath() 
+        print(message)
         dispatcher.utter_message(template="utter_totaldeath",localdeaths=message)
         return [] 
 class ActionHospitalIndividual(Action):
@@ -92,6 +96,7 @@ class ActionHospitalIndividual(Action):
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
         message  = dailyNoOfIndividuals() 
+        print(message)
         dispatcher.utter_message(template="utter_individualsinhospital",localtotalnumberofindividualsinhospitals=message)
         return [] 
 class ActionTodayDeath(Action):
@@ -103,6 +108,7 @@ class ActionTodayDeath(Action):
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
         message  = dailyTodayDeades() 
+        print(message)
         dispatcher.utter_message(template="utter_todaydeath",count=message)
         return [] 
 
@@ -117,7 +123,8 @@ class ActionLocalRecovary(Action):
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
         message  = dailyRecovered() 
-        dispatcher.utter_message(template="utter_localrecovered",localrecovered=message[0])
+        print(message)
+        dispatcher.utter_message(template="utter_localrecovered",localrecovered=message)
         return [] 
 
 
@@ -130,6 +137,7 @@ class ActionPcrCount(Action):
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
         message  = dailyTotalpcrTest() 
+        print(message)
         dispatcher.utter_message(template="utter_pcrcount",totalpcrtestingcount=message)
         return [] 
 class ActionactiveCase(Action):
@@ -141,6 +149,7 @@ class ActionactiveCase(Action):
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
         message  = dailylocalActiveCase() 
+        print(message)
         dispatcher.utter_message(template="utter_activecase",localactivecases=message)
         return [] 
 
@@ -154,6 +163,7 @@ class ActionglobalactiveCase(Action):
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
         message  = dailyglobalActiveCase() 
+        print(message)
         dispatcher.utter_message(template="utter_globalactivecase",globalactivecases=message)
         return [] 
 
@@ -166,6 +176,7 @@ class Actionglobalnewactivecase(Action):
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
         message  = dailyglobalNewCase() 
+        print(message)
         dispatcher.utter_message(template="utter_globalnewcase",globalnewcases=message)
         return [] 
 class Actionglobaltolatdeath(Action):
@@ -207,8 +218,8 @@ class Actionglobalrecovary(Action):
 class dbTracker:
     def getDbConnection():
         
-        client = pymongo.MongoClient("mongodb+srv://admin:admin@cluster0.auccv.mongodb.net/covid?retryWrites=true&w=majority")
-        # client = pymongo.MongoClient('localhost', 27017)
+        # client = pymongo.MongoClient("mongodb+srv://admin:admin123@cluster0.auccv.mongodb.net/covid?retryWrites=true&w=majority")
+        client = pymongo.MongoClient('localhost', 27017)
         db = client.covid
         logging.info("connection with database...")
         return db
@@ -232,9 +243,39 @@ class ActionMongoData(Action):
         list_cur = list(data)
         json_data = dumps(list_cur)
         objArray = json.loads(json_data)
-        item =objArray[0]
-        print(item)
-        dispatcher.utter_message(template="utter_mohdetailsall",cityName=item['city'], mohtpNumber1=item['phoneNo'],mohaddress1 = item['address'])
+        for item in objArray:
+            print(item)
+            dispatcher.utter_message(template="utter_mohdetailsall",cityName=item['city'], mohtpNumber1=item['phoneNo'],mohaddress1 = item['address'])
+
+
+        # item =objArray[0]
+        return [] 
+
+class ActionMongoData(Action):
+
+    def name(self) -> Text:
+        return "action_phiDatabase_tracker"
+
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+        # client = pymongo.MongoClient('localhost', 27017)
+        # db = client.covid
+        print('call db')
+        cityName = tracker.get_slot("city")
+        print(cityName)    
+        dbConecter  = dbTracker.getDbConnection()
+        query = {"district":cityName}
+        data = getPhiDetails(query, dbConecter)
+        list_cur = list(data)
+        json_data = dumps(list_cur)
+        objArray = json.loads(json_data)
+        for item in objArray:
+            print(item)
+            dispatcher.utter_message(template="utter_phidetailsall",cityName=item['district'],phiName=item['name'],phitpNumber=item['mobile'],phiEmail=item['email'],phiaddress = item['address'])
+
+
+        # item =objArray[0]
         return [] 
 
 def resetSymtoms():
@@ -443,7 +484,7 @@ class ActionontalogyData(Action):
               "value" : str(ratTest)
             },
             {
-               "entity" : "Vacination",
+               "entity" : "Vaccination",
                "value" : str(fullyVacinated)
             },
             {

@@ -1,0 +1,68 @@
+version: "3.0"
+
+nlu:
+- intent: general/testForPastCovidCheck
+  examples: |
+    - I want to find out if I had covid-19 in the past, what test could I take
+    - How to know if I had covid in the past
+    - is there any specific test to take in order to know whether someone had covid in the past
+    - how can anyone know whether they had covid in the past
+    - how to test for the presence of covid virus in the past
+    - How can I know if I had covid in the past
+
+- intent: general/whatToDoIfSomeoneGetsSick
+  examples: |
+    - What should I do if someone in my family gets really ill with covid-19
+    - What is the first thing to do if someone closer to me gets sick with coronavirus
+    - How should I act if someone gets sick with covid
+    - what to do if someone gets detected with covid
+    - how to act if someone near me gets sick
+
+- intent: general/differentiateBetweenNews
+  examples: |
+    - Covid-19 is everywhere in the news, how can I find what is true and what is not
+    - How can I know what news is true regarding covid updates
+    - how to differentiate between true and false news regarding covid
+    - how to make sure the news I receive about covid updates is true
+    - How to differ in between true and false news about covid
+    - what is the best source to look for accurate covid updates
+    - How could anyone identify whether a covid update source is true or false
+
+- intent: general/whenWillThingsGetNormal
+  examples: |
+    - When will the pandemic end and things get back to normal
+    - when will this end
+    - when will the pandemic end
+    - when do you think the world will go back to the normal way
+    - how long should I wait for things to get back to normal
+    - according to you data, how long do u think it will take for the work to become normal
+    
+- intent: general/spreadBreastfeeding
+  examples: |
+    - Can covid-19 be passed through breastfeeding
+    - can my infant son or daughter get covid if I have covid-19 and breastfeed them
+    - can infants get infected by covid through breastfeeding of an affected mother
+    - is beastfeeding dangerous at these times
+    - how riskiy is breastfeeding newborn infants at these times
+    - is there a way to reduce the risk of breastfeeding
+    - is it okay for mothers confirmed with covid-19 to breastfeed
+    - I am suspected with covid 19. Is it safe for me to breastfeed my child
+
+- intent: general/bestPractices
+  examples: |
+    - What are recommended practices once back home after outdoor activities
+    - What are the best practices to follow when I get back home after going outdoors
+    - What are the priorities I should follow once I get back home after going out
+    - what are key points that I should remember when returning home after going outdoors
+    - tell me some best practices
+    - best practices after comming home
+
+- intent: general/somokingConcerns
+  examples: |
+    - As a smoker, am I likely to get more severe symptoms if infected
+    - Do smokers have a higher probability of getting infected
+    - Are there any complication of getting infected with covid as a tobacco user
+    - Is smoking making things worse when getting infected with covid
+    - How do smokers have to cope with the ongoing pandemic
+    - As a smoker, should I be more careful
+    - Does smoking combined with covid make things worse
