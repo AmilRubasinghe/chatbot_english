@@ -1,0 +1,72 @@
+version: "3.0"
+stories:
+  - story: storytestForPastCovidCheck
+    steps:
+    - intent: greet
+    - action: utter_greet
+    - action: utter_did_that_help
+    - intent: affirm
+    - action: utter_what_you_want
+    - intent: general/testForPastCovidCheck
+    - action: utter_general/testForPastCovidCheck
+
+
+  - story: storywhatToDoIfSomeoneGetsSick
+    steps:
+    - intent: greet
+    - action: utter_greet
+    - action: utter_did_that_help
+    - intent: affirm
+    - action: utter_what_you_want
+    - intent: general/whatToDoIfSomeoneGetsSick
+    - action: utter_general/whatToDoIfSomeoneGetsSick
+
+  - story: storydifferentiateBetweenNews
+    steps:
+    - intent: greet
+    - action: utter_greet
+    - action: utter_did_that_help
+    - intent: affirm
+    - action: utter_what_you_want
+    - intent: general/differentiateBetweenNews
+    - action: utter_general/differentiateBetweenNews
+
+  - story: storyspreadBreastfeeding
+    steps:
+    - intent: greet
+    - action: utter_greet
+    - action: utter_did_that_help
+    - intent: affirm
+    - action: utter_what_you_want
+    - intent: general/spreadBreastfeeding
+    - action: utter_general/spreadBreastfeeding
+
+  - story: storybestPractices
+    steps:
+    - intent: greet
+    - action: utter_greet
+    - action: utter_did_that_help
+    - intent: affirm
+    - action: utter_what_you_want
+    - intent: general/bestPractices
+    - action: utter_general/bestPractices
+
+  - story: storysomokingConcerns
+    steps:
+    - intent: greet
+    - action: utter_greet
+    - action: utter_did_that_help
+    - intent: affirm
+    - action: utter_what_you_want
+    - intent: general/somokingConcerns
+    - action: utter_general/somokingConcerns
+
+  - story: storywhenWillThingsGetNormal
+    steps:
+    - intent: greet
+    - action: utter_greet
+    - action: utter_did_that_help
+    - intent: affirm
+    - action: utter_what_you_want
+    - intent: general/whenWillThingsGetNormal
+    - action: utter_general/whenWillThingsGetNormal
