@@ -46,4 +46,27 @@ stories:
   - intent: mohintown
   - action: action_phiDatabase_tracker
 
+- story: storymohcase
+  steps:
+  - intent: mohfulldetails
+  - action: action_database_tracker
+
+- story: storyasktownmohcase
+  steps:
+  - intent: askmoh
+  - action: utter_mohintown
+  - intent: mohintown
+  - action: action_database_tracker
+
+- story: storyphicase
+  steps:
+  - intent: phifulldetails
+  - action: action_phiDatabase_tracker
+
+- story: storyasktownphicase
+  steps:
+  - intent: askphi
+  - action: utter_phiintown
+  - intent: mohintown
+  - action: action_phiDatabase_tracker
 

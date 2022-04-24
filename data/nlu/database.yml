@@ -49,12 +49,16 @@ nlu:
 
 - intent: mohintown
   examples: |
+    - I live in [Badulla](city)
+    - I am in [Jaffna](city)
+    - I reside in [Kandy](city)
     - [Colombo](city)
     - [Gampaha](city)
     - [Kalutara](city)
     - [Kandy](city)
     - [Matale](city)
     - [Nuwara Eliya](city)
+    - [Nuwaraeliya](city)
     - [Galle](city)
     - [Matara](city)
     - [Hambantota](city)

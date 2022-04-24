@@ -37,6 +37,7 @@ from daily import dailyGlobalNewDeathCase
 from daily import dailyGlobalRecoveryCase
 from bson.json_util import dumps, loads
 import json
+
 from rasa_sdk.events import (
     SlotSet,
     UserUtteranceReverted,
@@ -46,10 +47,36 @@ from rasa_sdk.events import (
 import uuid
 import random
 import string
+from spellchecker import SpellChecker
 
 def randomword(length):
    letters = string.ascii_lowercase
    return ''.join(random.choice(letters) for i in range(length))
+
+def getCorrectCity(cityEntity):        
+    print(cityEntity) 
+    entities = cityEntity
+    spell = SpellChecker(language = None)
+    spell.word_frequency.load_text_file("F:/fanal-year-project/towns.txt")
+    # new_entity = spell.correction(entities)
+    for e in entities:
+        if e['entity'] == 'city':
+            name = e['value'] 
+        words = name.split()
+        new_entity = ' '.join(spell.correction(w) for w in words)
+        
+    new_entity = new_entity.lower()
+    print(new_entity)
+    with open("F:/fanal-year-project/towns.txt") as f:
+        if(str(new_entity) == "nuwaraeliya"):
+            return "nuwara eliya"
+         
+        elif(str(new_entity) in f.read()):
+            print("true")
+            return new_entity
+        else :  
+            print("false")     
+            return ""
 
 class ActionPositiveCase(Action):
 
@@ -223,7 +250,7 @@ class dbTracker:
         db = client.covid
         logging.info("connection with database...")
         return db
-    
+   
 class ActionMongoData(Action):
 
     def name(self) -> Text:
@@ -234,23 +261,36 @@ class ActionMongoData(Action):
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
         # client = pymongo.MongoClient('localhost', 27017)
         # db = client.covid
+        message = "Sorry, I cannot identify that district name"
         print('call db')
-        cityName = tracker.get_slot("city")
-        print(cityName)    
-        dbConecter  = dbTracker.getDbConnection()
-        query = {"city":cityName}
-        data = getMohDetails(query, dbConecter)
-        list_cur = list(data)
-        json_data = dumps(list_cur)
-        objArray = json.loads(json_data)
-        for item in objArray:
-            print(item)
-            dispatcher.utter_message(template="utter_mohdetailsall",cityName=item['city'], mohtpNumber1=item['phoneNo'],mohaddress1 = item['address'])
+        city = tracker.latest_message['entities']
+        if not city:
+            print("isIn")
+            dispatcher.utter_message(text= message)
+            return
+        else:
+            print(city)
+            cityName = getCorrectCity(city)
+            print(cityName)
+            if cityName == "":
+                dispatcher.utter_message(text= message)
+                return
+            else:
+                dbConecter  = dbTracker.getDbConnection()
+                query = {"district":cityName}
+                data = getMohDetails(query, dbConecter)
+                list_cur = list(data)
+                json_data = dumps(list_cur)
+                objArray = json.loads(json_data)
+                for item in objArray:
+                    print(item)
+                    dispatcher.utter_message(template="utter_mohdetailsall",cityName=item['district'], mohtpNumber1=item['mobile'],mohaddress1 = item['address'])
 
 
         # item =objArray[0]
+        
         return [] 
-
+        
 class ActionMongoData(Action):
 
     def name(self) -> Text:
@@ -261,18 +301,31 @@ class ActionMongoData(Action):
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
         # client = pymongo.MongoClient('localhost', 27017)
         # db = client.covid
+        message = "Sorry, I cannot identify that district name"
         print('call db')
-        cityName = tracker.get_slot("city")
-        print(cityName)    
-        dbConecter  = dbTracker.getDbConnection()
-        query = {"district":cityName}
-        data = getPhiDetails(query, dbConecter)
-        list_cur = list(data)
-        json_data = dumps(list_cur)
-        objArray = json.loads(json_data)
-        for item in objArray:
-            print(item)
-            dispatcher.utter_message(template="utter_phidetailsall",cityName=item['district'],phiName=item['name'],phitpNumber=item['mobile'],phiEmail=item['email'],phiaddress = item['address'])
+        city = tracker.latest_message['entities']
+        print(city)
+        if not city:
+            print("isIn")
+            dispatcher.utter_message(text= message)
+            return
+        else:
+            print(city)
+            cityName = getCorrectCity(city)
+            print(cityName)
+            if cityName == "":
+                dispatcher.utter_message(text= message)
+                return
+            else:    
+                dbConecter  = dbTracker.getDbConnection()
+                query = {"district":cityName}
+                data = getPhiDetails(query, dbConecter)
+                list_cur = list(data)
+                json_data = dumps(list_cur)
+                objArray = json.loads(json_data)
+                for item in objArray:
+                    print(item)
+                    dispatcher.utter_message(template="utter_phidetailsall",cityName=item['district'],phiName=item['name'],phitpNumber=item['mobile'],phiEmail=item['email'],phiaddress = item['address'])
 
 
         # item =objArray[0]
