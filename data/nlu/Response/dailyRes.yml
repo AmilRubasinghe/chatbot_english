@@ -1,29 +1,66 @@
 version: "3.0"
 responses:
   utter_todaydeath:
-  - text: Today death count is {count} in srilanka.
+  - text: |
+      Today death count is {count} in srilanka (Last Updated Time - {time}). 
+      Source - https://hpb.health.gov.lk/covid19-dashboard/.
+
   utter_todaypositivecase:
-  - text: Today {localnewcases} new positive cases  in srilanka.
+  - text: |
+      Today {localnewcases} new positive cases  in srilanka (Last Updated Time - {time}).
+      Source - https://hpb.health.gov.lk/covid19-dashboard/.
+
   utter_totalpositivecase:
-  - text: Total {localtotalcases} positive case in srilanka
+  - text: | 
+      Total {localtotalcases} positive case in srilanka (Last Updated Time - {time}).
+      Source - https://hpb.health.gov.lk/covid19-dashboard/.
+  
   utter_totaldeath:
-  - text: Total {localdeaths} deaths in srilanka. 
+  - text: |
+      Total {localdeaths} deaths in srilanka (Last Updated Time - {time}).
+      Source - https://hpb.health.gov.lk/covid19-dashboard/. 
+
   utter_individualsinhospital:
-  - text: Total {localtotalnumberofindividualsinhospitals} number of individuals in the hospital today.
-  utter_localrecovered:
-  - text: Total {localrecovered} recovery people in srilanka.
+  - text: |
+      Total {localtotalnumberofindividualsinhospitals} number of individuals in the hospital today (Last Updated Time - {time}). 
+      Source - https://hpb.health.gov.lk/covid19-dashboard/.
+  
+  utter_localrecovered: 
+  - text: |
+      Total {localrecovered} recovery people in srilanka (Last Updated Time - {time}). 
+      Source - https://hpb.health.gov.lk/covid19-dashboard/.
+
   utter_pcrcount:
-  - text: Total {totalpcrtestingcount} number of pcr tesing count in srilanka
+  - text: |
+      Total {totalpcrtestingcount} number of pcr tesing count in srilanka (Last Updated Time - {time}).
+      Source - https://hpb.health.gov.lk/covid19-dashboard/.
+
   utter_activecase:
-  - text: Total {localactivecases} active cases in srilanka.
+  - text: |
+      Total {localactivecases} active cases in srilanka (Last Updated Time - {time}). 
+      Source - https://hpb.health.gov.lk/covid19-dashboard/.
 
   utter_globalactivecase:
-  - text: Total {globalactivecases} global active cases in the world.
+  - text: |
+      Total {globalactivecases} global active cases in the world (Last Updated Time - {time}). 
+      Source - https://hpb.health.gov.lk/covid19-dashboard/.
+
   utter_globalnewcase:
-  - text: Total {globalnewcases} global new cases in the world.
+  - text: |
+      Total {globalnewcases} global new cases in the world (Last Updated Time - {time}). 
+      Source - https://hpb.health.gov.lk/covid19-dashboard/.
+
   utter_globaltotaldeath:
-  - text: Total {globaldeths} global deaths in the world.
+  - text: |
+      Total {globaldeths} global deaths in the world (Last Updated Time - {time}). 
+      Source - https://hpb.health.gov.lk/covid19-dashboard/.
+
   utter_globalnewdeaths:
-  - text: Total {globalnewdeath} global new deaths in the world.
+  - text: |
+      Total {globalnewdeath} global new deaths in the world (Last Updated Time - {time}). 
+      Source - https://hpb.health.gov.lk/covid19-dashboard/.
+
   utter_globalrecovary:
-  - text: Total {globalrecovery} global recovery in the world.
+  - text: |
+      Total {globalrecovery} global recovery in the world (Last Updated Time - {time}). 
+      Source - https://hpb.health.gov.lk/covid19-dashboard/.

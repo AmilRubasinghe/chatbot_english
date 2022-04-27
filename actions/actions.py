@@ -88,7 +88,7 @@ class ActionPositiveCase(Action):
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
         message  = dailyNewCases() 
         print(message)
-        dispatcher.utter_message(template="utter_todaypositivecase",localnewcases=message)
+        dispatcher.utter_message(template="utter_todaypositivecase",localnewcases=message["value"], time= message["time"] )
         return [] 
 class ActionTotalPositive(Action):
 
@@ -100,7 +100,7 @@ class ActionTotalPositive(Action):
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
         message  = dailyTotalCases() 
         print(message)
-        dispatcher.utter_message(template="utter_totalpositivecase",localtotalcases=message)
+        dispatcher.utter_message(template="utter_totalpositivecase",localtotalcases=message["value"], time= message["time"])
         return [] 
 class ActionTotalDeath(Action):
 
@@ -112,7 +112,7 @@ class ActionTotalDeath(Action):
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
         message  = dailyTotalDeath() 
         print(message)
-        dispatcher.utter_message(template="utter_totaldeath",localdeaths=message)
+        dispatcher.utter_message(template="utter_totaldeath",localdeaths=message["value"], time= message["time"])
         return [] 
 class ActionHospitalIndividual(Action):
 
@@ -124,7 +124,7 @@ class ActionHospitalIndividual(Action):
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
         message  = dailyNoOfIndividuals() 
         print(message)
-        dispatcher.utter_message(template="utter_individualsinhospital",localtotalnumberofindividualsinhospitals=message)
+        dispatcher.utter_message(template="utter_individualsinhospital",localtotalnumberofindividualsinhospitals=message["value"], time= message["time"])
         return [] 
 class ActionTodayDeath(Action):
 
@@ -136,7 +136,7 @@ class ActionTodayDeath(Action):
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
         message  = dailyTodayDeades() 
         print(message)
-        dispatcher.utter_message(template="utter_todaydeath",count=message)
+        dispatcher.utter_message(template="utter_todaydeath",count=message["value"], time= message["time"])
         return [] 
 
 
@@ -151,7 +151,7 @@ class ActionLocalRecovary(Action):
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
         message  = dailyRecovered() 
         print(message)
-        dispatcher.utter_message(template="utter_localrecovered",localrecovered=message)
+        dispatcher.utter_message(template="utter_localrecovered",localrecovered=message["value"], time= message["time"])
         return [] 
 
 
@@ -165,7 +165,7 @@ class ActionPcrCount(Action):
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
         message  = dailyTotalpcrTest() 
         print(message)
-        dispatcher.utter_message(template="utter_pcrcount",totalpcrtestingcount=message)
+        dispatcher.utter_message(template="utter_pcrcount",totalpcrtestingcount=message["value"], time= message["time"])
         return [] 
 class ActionactiveCase(Action):
 
@@ -177,7 +177,7 @@ class ActionactiveCase(Action):
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
         message  = dailylocalActiveCase() 
         print(message)
-        dispatcher.utter_message(template="utter_activecase",localactivecases=message)
+        dispatcher.utter_message(template="utter_activecase",localactivecases=message["value"], time= message["time"])
         return [] 
 
 
@@ -191,7 +191,7 @@ class ActionglobalactiveCase(Action):
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
         message  = dailyglobalActiveCase() 
         print(message)
-        dispatcher.utter_message(template="utter_globalactivecase",globalactivecases=message)
+        dispatcher.utter_message(template="utter_globalactivecase",globalactivecases=message["value"], time= message["time"])
         return [] 
 
 class Actionglobalnewactivecase(Action):
@@ -204,7 +204,7 @@ class Actionglobalnewactivecase(Action):
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
         message  = dailyglobalNewCase() 
         print(message)
-        dispatcher.utter_message(template="utter_globalnewcase",globalnewcases=message)
+        dispatcher.utter_message(template="utter_globalnewcase",globalnewcases=message["value"], time= message["time"])
         return [] 
 class Actionglobaltolatdeath(Action):
 
@@ -215,7 +215,7 @@ class Actionglobaltolatdeath(Action):
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
         message  = dailyGlobalDeathsCase() 
-        dispatcher.utter_message(template="utter_globaltotaldeath",globaldeths=message)
+        dispatcher.utter_message(template="utter_globaltotaldeath",globaldeths=message["value"], time= message["time"])
         return [] 
 
 class Actionglobalnewdeathcase(Action):
@@ -227,7 +227,7 @@ class Actionglobalnewdeathcase(Action):
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
         message  = dailyGlobalNewDeathCase() 
-        dispatcher.utter_message(template="utter_globalnewdeaths",globalnewdeath=message)
+        dispatcher.utter_message(template="utter_globalnewdeaths",globalnewdeath=message["value"], time= message["time"])
         return [] 
 
 class Actionglobalrecovary(Action):
@@ -239,7 +239,7 @@ class Actionglobalrecovary(Action):
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
         message  = dailyGlobalRecoveryCase() 
-        dispatcher.utter_message(template="utter_globalrecovary",globalrecovery=message)
+        dispatcher.utter_message(template="utter_globalrecovary",globalrecovery=message["value"], time= message["time"])
         return [] 
 
 class dbTracker:
@@ -282,6 +282,7 @@ class ActionMongoData(Action):
                 list_cur = list(data)
                 json_data = dumps(list_cur)
                 objArray = json.loads(json_data)
+                print(objArray)
                 for item in objArray:
                     print(item)
                     dispatcher.utter_message(template="utter_mohdetailsall",cityName=item['district'], mohtpNumber1=item['mobile'],mohaddress1 = item['address'])
