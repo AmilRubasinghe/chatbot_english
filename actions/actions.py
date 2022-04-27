@@ -67,7 +67,8 @@ def getCorrectCity(cityEntity):
         
     new_entity = new_entity.lower()
     print(new_entity)
-    with open("F:/fanal-year-project/towns.txt") as f:
+    # with open("F:/fanal-year-project/towns.txt") as f:
+    with open("/towns.txt") as f:
         if(str(new_entity) == "nuwaraeliya"):
             return "nuwara eliya"
          
