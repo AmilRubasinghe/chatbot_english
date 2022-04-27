@@ -4,7 +4,7 @@ from owlready2 import *
 import json
 import re
 sys.path.append("C:/")
-ONTOLOGY_PATH = "/root/FYP/Ontology/covid-data-ontology.owl"
+ONTOLOGY_PATH = "./root/FYP/Ontology/covid-data-ontology.owl"
 # ONTOLOGY_PATH = "file://F:/fanal-year-project/covid-data-ontology.owl"
 
     
