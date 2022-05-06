@@ -19,6 +19,8 @@ nlu:
     - Can I have details of the MOH of my area
     - can I have the details of the closest moh office
     - MOH details
+    - moh info
+    - Can I get moh information
     - moh office contact number
     - can I have the details of the moh office closest to me
     - details of the closest MOH office
@@ -43,6 +45,8 @@ nlu:
     - Can I have details of the PHIs of my area
     - can I have the details of the closest PHI personal
     - PHI details
+    - phi info
+    - Can I get phi information
     - Public health inspector contact number
     - can I have the details of the phi closest to me
     - details of the closest public health inspector  
@@ -56,6 +60,7 @@ nlu:
     - [Gampaha](city)
     - [Kalutara](city)
     - [Kandy](city)
+    - [Matale](city)
     - [Matale](city)
     - [Nuwara Eliya](city)
     - [Nuwaraeliya](city)
@@ -106,6 +111,7 @@ nlu:
     - Moneragala
     - Ratnapura
     - Kegalla
+    - mathara
 
 - synonym: moh
   examples: |

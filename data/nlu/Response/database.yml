@@ -1,10 +1,19 @@
 version: "3.0"
 responses:
   utter_phidetailsall:
-  - text: In {cityName} district,phi name {phiName} PHI telephone no is {phitpNumber}  phi email {phiEmail}  address is {phiaddress}.
+  - text: |
+      PHI in {cityName} district:
+      PHI Name - {phiName} 
+      Contact No - {phitpNumber}  
+      Email Adderess - {phiEmail}  
+      Official Address - {phiaddress}
   
   utter_mohdetailsall:
-  - text: In {cityName} district, Main MOH office's telephone no is {mohtpNumber1} and address is {mohaddress1}.
+  - text: |
+      Moh Office in {cityName} district : 
+      Main MOH office's Contact No - {mohtpNumber1}  
+      Official Address - {mohaddress1}
+
   # utter_mohtelephoneNumber:
   # - text: Main MOH office's telephone no is {mohphoneNumber} in {cityName} district
   # utter_mohtelephoneNumber:

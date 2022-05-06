@@ -57,7 +57,7 @@ def getCorrectCity(cityEntity):
     print(cityEntity) 
     entities = cityEntity
     spell = SpellChecker(language = None)
-    spell.word_frequency.load_text_file("F:/fanal-year-project/towns.txt")
+    spell.word_frequency.load_text_file("towns.txt")
     # new_entity = spell.correction(entities)
     for e in entities:
         if e['entity'] == 'city':
@@ -67,8 +67,8 @@ def getCorrectCity(cityEntity):
         
     new_entity = new_entity.lower()
     print(new_entity)
-    # with open("F:/fanal-year-project/towns.txt") as f:
-    with open("/towns.txt") as f:
+    with open("towns.txt") as f:
+    # with open("/towns.txt") as f:
         if(str(new_entity) == "nuwaraeliya"):
             return "nuwara eliya"
          
@@ -265,6 +265,7 @@ class ActionMongoData(Action):
         message = "Sorry, I cannot identify that district name"
         print('call db')
         city = tracker.latest_message['entities']
+        print(city)
         if not city:
             print("isIn")
             dispatcher.utter_message(text= message)

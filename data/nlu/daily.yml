@@ -6,6 +6,7 @@ nlu:
     - Today covid death
     - covid death
     - covid death today
+    - how many have died from covid today
     - how many death today
     - today death count
     - what is the total number of deaths for today
@@ -41,6 +42,8 @@ nlu:
     - how many have died to covid so far
     - how many deaths in total have been reported so far
     - total deaths
+    - how many have died from covid so far
+    - how many have died from covid
     - Can I know the total number of deaths that was caused by the covid 19 virus so far
 
 - intent:  individualsinhospital

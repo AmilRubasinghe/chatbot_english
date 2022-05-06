@@ -258,7 +258,7 @@ responses:
              "
 
   utter_greet:
-  - text: "Hey! How are you"
+  - text: "Hi! I am team AI Mind's English assistant chatbot that can help you with problems regarding the Covid-19 disease and the current global situation."
   
   utter_few_question:
   - text: "We will ask you few questions to determine if you are at high risk of becoming Covid-19 patient.\n You can use a rapid antigen test (RAT) or PCR test to exactly determine if you are infected with COVID-19. \n Sign up for the 1390 HBCS Patient Portal, which may link important health care aids and advice on your COVID-19 risk. \n \n
@@ -355,7 +355,7 @@ responses:
       payload: /dont_know_travel{{"high_transmitted":"dont know"}}
 
   utter_did_that_help:
-  - text: "Do you want to continue?"
+  - text: "Do you wish to proceed?"
 
   utter_happy:
   - text: "Great, carry on!🙂"
