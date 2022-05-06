@@ -240,13 +240,14 @@ forms:
 responses:
 
   utter_out_of_scope:
-  - text: Sorry, I can't handle that request.
+  - text: Sorry, I can't response that request.
   
   utter_please_rephrase:
   - text: I'm sorry, I didn't quite understand that. Could you rephrase?
 
   utter_ask_continue:
   - text: "Do you want to continue?"
+
   utter_slots_values:
   - text: "You are filling data:\n
              - Returned to SriLanka from other country: {return_to_srilanka}\n
@@ -354,7 +355,7 @@ responses:
       payload: /dont_know_travel{{"high_transmitted":"dont know"}}
 
   utter_did_that_help:
-  - text: "Did that help you?"
+  - text: "Do you want to continue?"
 
   utter_happy:
   - text: "Great, carry on!🙂"
@@ -366,7 +367,7 @@ responses:
   - text: "I am AImind covid bot🙂, I can uderstand Engilsh and sinhala language"
 
   utter_goodbye:
-  - text: "Bye 👋"
+  - text: "Nice to meet you. Come Again 👋"
   - text: "Bye come again"
 
   utter_call_api:
@@ -379,7 +380,7 @@ responses:
   - text: "I am a bot created by AiMinds team🙂"
 
   utter_bot_to_blame:
-  - text: "Can you be a prepetional" 
+  - text: "I am sorry to dissapoint you." 
 
   utter_ido:
   - text: "I am a bot for helping covid related question domain"
@@ -388,7 +389,7 @@ responses:
   - text: "Yes, can"
 
   utter_send_email_team:
-  - text: "You can email for team \n Team's email is teamaiminds@gmail.com"
+  - text: "You can email for team. Team's email is teamaiminds@gmail.com"
 
   utter_nice_to_meet:
   - text: "Nice to meet you. Come again"
@@ -397,13 +398,13 @@ responses:
   - text: "Thanks. Come again"
 
   utter_what_you_want:
-  - text: "What you want to know?"
+  - text: "Great! What you want to know?"
 
   utter_mohintown:
-  - text: "Which district moh office details, Do you want to know?"
+  - text: "Which district's moh office details do you want to know?"
 
   utter_phiintown:
-  - text: "Which district phi  details, Do you want to know?"
+  - text: "Which district's phi details do you want to know?"
 
 actions:
 - action_today_positive_case

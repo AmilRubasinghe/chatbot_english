@@ -8,10 +8,11 @@ stories:
       hello there!
     intent: greet
   - action: utter_greet
+  - action: utter_did_that_help
   - user: |
-      amazing
-    intent: mood_great
-  - action: utter_happy
+      yes
+    intent: affirm
+  - action: utter_what_you_want
 
 - story: happy path 2
   steps:
@@ -19,30 +20,16 @@ stories:
       hello there!
     intent: greet
   - action: utter_greet
+  - action: utter_did_that_help
   - user: |
-      amazing
-    intent: mood_great
-  - action: utter_happy
+      of course
+    intent: affirm
+  - action: utter_what_you_want
   - user: |
       bye-bye!
     intent: goodbye
   - action: utter_goodbye
 
-- story: sad path 1
-  steps:
-  - user: |
-      hello
-    intent: greet
-  - action: utter_greet
-  - user: |
-      not good
-    intent: mood_unhappy
-  - action: utter_cheer_up
-  - action: utter_did_that_help
-  - user: |
-      yes
-    intent: affirm
-  - action: utter_happy
 
 - story: sad path 2
   steps:
@@ -50,10 +37,6 @@ stories:
       hello
     intent: greet
   - action: utter_greet
-  - user: |
-      not good
-    intent: mood_unhappy
-  - action: utter_cheer_up
   - action: utter_did_that_help
   - user: |
       not really
@@ -66,10 +49,6 @@ stories:
       hi
     intent: greet
   - action: utter_greet
-  - user: |
-      very terrible
-    intent: mood_unhappy
-  - action: utter_cheer_up
   - action: utter_did_that_help
   - user: |
       no
@@ -89,3 +68,75 @@ stories:
       are you a bot?
     intent: bot_challenge
   - action: utter_iamabot
+
+- story: happy path 4
+  steps:
+  - user: |
+     hi
+    intent: greet
+  - action: utter_greet
+  - action: utter_did_that_help
+  - user: |
+      yes
+    intent: affirm
+  - action: utter_what_you_want
+  - user: |
+      What language u support?
+    intent: askfaqlanguages
+  - action: utter_bot_language
+
+- story: sad path 5
+  steps:
+  - user: |
+     hello there
+    intent: greet
+  - action: utter_greet
+  - action: utter_did_that_help
+  - user: |
+      Good
+    intent: affirm
+  - action: utter_what_you_want
+  - user: |
+      You have no brains
+    intent: blameBot
+  - action: utter_bot_to_blame
+
+- story: happy path 5
+  steps:
+  - user: |
+     hi
+    intent: greet
+  - action: utter_greet
+  - action: utter_did_that_help
+  - user: |
+      yes
+    intent: affirm
+  - action: utter_what_you_want
+  - user: |
+      Can you tell me my name?
+    intent: askwhatismyname
+  - action: utter_botname
+  - user: |
+      goodbye
+    intent: goodbye
+  - action: utter_goodbye
+
+- story: happy path 6
+  steps:
+  - user: |
+     hi
+    intent: greet
+  - action: utter_greet
+  - action: utter_did_that_help
+  - user: |
+      yes
+    intent: affirm
+  - action: utter_what_you_want
+  - user: |
+      Can you tell me my name?
+    intent: askwhatismyname
+  - action: utter_botname
+  - user: |
+      goodbye
+    intent: goodbye
+  - action: utter_goodbye
