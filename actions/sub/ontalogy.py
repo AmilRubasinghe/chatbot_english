@@ -4,7 +4,7 @@ from owlready2 import *
 import json
 import re
 # sys.path.append("C:/")
-ONTOLOGY_PATH = "file://covid-data-ontology.owl"
+ONTOLOGY_PATH = "file://covid-data-ontology2.owl"
 # ONTOLOGY_PATH = "file://F:/fanal-year-project/covid-data-ontology.owl"
 
     
@@ -37,8 +37,8 @@ def ontalogyCall(dataList):
             if(e["entity"] == "Immigration_History"):
                 Immigration_History = (e['value'])
             
-            # if(e["entity"] == "Vaccination"):
-            #     Vaccination = (e['value'])
+            if(e["entity"] == "Vaccination"):
+                fully_vaccinated  = (e['value'])
 
     # Create user in ontology
     name = onto.Person(name)
@@ -52,6 +52,12 @@ def ontalogyCall(dataList):
     else:
         name.hasSymptoms.append(False)
 
+    #Insert Test Results Property (Object properties)
+    if(Test_Results.lower() == 'positive'):
+            #testResults = onto.Test_result(Test_Results)
+            name.hasTest.append(True)
+    else:
+        name.hasTest.append(False)
 
     # Insert Data Properties
     if((Contact_History.lower() == 'yes') or (Travel_History.lower() == 'yes')):
@@ -59,10 +65,10 @@ def ontalogyCall(dataList):
     elif((Contact_History.lower() == 'no') or (Travel_History.lower() == 'no')):
         name.hadHistory.append(False)
     
-    # if(Vaccination.lower() == 'yes'):
-    #     name.fully_vaccinated.append(True)
-    # elif(Vaccination.lower() == 'no'):
-    #     name.fully_vaccinated.append(False)
+    if(fully_vaccinated.lower() == 'yes'):
+            name.fully_vaccinated.append(True)
+    elif(fully_vaccinated.lower() == 'no'):
+        name.fully_vaccinated.append(False)
 
     # Start Reasoner
     sync_reasoner(infer_property_values = True)

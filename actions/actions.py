@@ -562,20 +562,9 @@ class ActionontalogyData(Action):
 
         dataList = ontalogyCall(json.loads(listString))
         print(dataList)
-        dbConecter  = dbTracker.getDbConnection()
-        query = {"case_id": str(dataList['case'])}
-        dispatcher.utter_message(text='You are in '+dataList['case'])
-        data = getOntologyDetails(query, dbConecter)
-        print(data)
-        list_cur = list(data)
-        json_data = dumps(list_cur)
-        objArray = json.loads(json_data)
-        print(objArray)
-        item =objArray[0]
-        print(item)
-        dispatcher.utter_message(text=item['recommendation_EN'])
-        
-        return[ SlotSet("sore_throat", None),
+        if str(dataList['recommendation']) == '':
+            dispatcher.utter_message(text= "We're sorry ! No recommendation at this level")
+            return[ SlotSet("sore_throat", None),
                 SlotSet("fever" , None),
                 SlotSet("cough",None),
                 SlotSet("headache",None),
@@ -594,3 +583,36 @@ class ActionontalogyData(Action):
                 SlotSet("fully_vacinated",None),
                 
                 ]
+        else :
+            dbConecter  = dbTracker.getDbConnection()
+            query = {"case_id": str(dataList['recommendation'])}
+            dispatcher.utter_message(text='You are in '+dataList['recommendation'])
+            data = getOntologyDetails(query, dbConecter)
+            print(data)
+            list_cur = list(data)
+            json_data = dumps(list_cur)
+            objArray = json.loads(json_data)
+            print(objArray)
+            item =objArray[0]
+            print(item)
+            dispatcher.utter_message(text=item['recommendation_EN'])
+            
+            return[ SlotSet("sore_throat", None),
+                    SlotSet("fever" , None),
+                    SlotSet("cough",None),
+                    SlotSet("headache",None),
+                    SlotSet("loss_taste",None),
+                    SlotSet("aches_pains",None),
+                    SlotSet("diarrhea",None),
+                    SlotSet("shortness_breath",None),
+                    SlotSet("confusion",None),
+                    SlotSet("chest_pain",None),
+                    SlotSet("bluish_lips",None),
+                    SlotSet("trouble_staying",None),
+                    SlotSet("return_to_srilanka",None),
+                    SlotSet("rat_test",None),
+                    SlotSet("close_contact",None),
+                    SlotSet("high_transmitted",None),
+                    SlotSet("fully_vacinated",None),
+                    
+                    ]
