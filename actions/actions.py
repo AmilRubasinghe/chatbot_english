@@ -586,7 +586,7 @@ class ActionontalogyData(Action):
         else :
             dbConecter  = dbTracker.getDbConnection()
             query = {"case_id": str(dataList['recommendation'])}
-            dispatcher.utter_message(text='You are in '+dataList['recommendation'])
+           
             data = getOntologyDetails(query, dbConecter)
             print(data)
             list_cur = list(data)
@@ -595,6 +595,7 @@ class ActionontalogyData(Action):
             print(objArray)
             item =objArray[0]
             print(item)
+            dispatcher.utter_message(text='You are in '+item['category_EN'])
             dispatcher.utter_message(text=item['recommendation_EN'])
             
             return[ SlotSet("sore_throat", None),
