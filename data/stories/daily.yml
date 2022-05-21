@@ -228,6 +228,7 @@ stories:
     - action: action_global_new_death
 
   - story: storyworldrecovery
+    steps:
     - intent: globalrecovery
     - action: action_global_recovary
 
